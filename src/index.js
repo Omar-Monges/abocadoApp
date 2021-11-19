@@ -6,6 +6,11 @@
 const BASE_URL = 'https://platzi-avo.vercel.app'
 const API = `${BASE_URL}/api/avo`
 const app = document.querySelector('#app')
+app.addEventListener('click', (e) => {
+    if(e.target.nodeName === 'H2'){
+        console.log(`Hey soy: ${e.target.textContent}`)
+    }
+})
 app.className = 'mt-10 grid grid-cols-2 gap-2'
 const formatPrice = (price) =>
     new Intl.NumberFormat("en-EN", {
